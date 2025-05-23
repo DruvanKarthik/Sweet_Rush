@@ -1,0 +1,145 @@
+[gd_scene load_steps=13 format=3 uid="uid://b55auyjrvkyhl"]
+
+[ext_resource type="Texture2D" uid="uid://bsws8n63xjj2p" path="res://Game_asstes/GUI/1.png" id="1_ropjy"]
+[ext_resource type="FontFile" uid="uid://cvtxkg7d6o1nk" path="res://Game_asstes/Fonts/CroxoxoianText.ttf" id="2_juik5"]
+[ext_resource type="Texture2D" uid="uid://c1k74hvj5u2d1" path="res://Game_asstes/GUI/Ui/Pixel Art Indian-Inspired Game UI.png" id="2_p3yj0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_juik5"]
+texture = ExtResource("2_p3yj0")
+region_rect = Rect2(35, 313, 319, 105)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s002p"]
+texture = ExtResource("2_p3yj0")
+region_rect = Rect2(34, 313, 321, 104)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q3dnn"]
+texture = ExtResource("2_p3yj0")
+region_rect = Rect2(33, 65, 322, 106)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ropjy"]
+texture = ExtResource("2_p3yj0")
+region_rect = Rect2(31, 309, 324, 109)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3y0v3"]
+texture = ExtResource("2_p3yj0")
+region_rect = Rect2(36, 313, 318, 103)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p3yj0"]
+texture = ExtResource("2_p3yj0")
+region_rect = Rect2(33, 190, 322, 103)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_elucv"]
+texture = ExtResource("2_p3yj0")
+texture_margin_top = 1.0
+region_rect = Rect2(34, 312, 321, 107)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aelo2"]
+texture = ExtResource("2_p3yj0")
+region_rect = Rect2(34, 313, 321, 104)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cefck"]
+texture = ExtResource("2_p3yj0")
+region_rect = Rect2(33, 64, 322, 108)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(160.5, 291)
+scale = Vector2(0.297222, 0.431111)
+texture = ExtResource("1_ropjy")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.5
+offset_top = -145.0
+offset_right = 82.5
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="Start_button" type="Button" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -73.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_juik5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_juik5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_s002p")
+theme_override_styles/normal = SubResource("StyleBoxTexture_q3dnn")
+text = "Start Game"
+
+[node name="Options_button" type="Button" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_juik5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ropjy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3y0v3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_p3yj0")
+text = "Options"
+
+[node name="Exit" type="Button" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 43.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_juik5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_elucv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_aelo2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cefck")
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 88.0
+offset_right = 184.0
+offset_bottom = 139.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_juik5")
+theme_override_font_sizes/font_size = 50
+text = "Sweet"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 136.0
+offset_right = 276.0
+offset_bottom = 187.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_juik5")
+theme_override_font_sizes/font_size = 50
+text = "Rush"

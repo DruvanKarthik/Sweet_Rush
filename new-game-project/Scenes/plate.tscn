@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://05v1dsaiq2cg"]
+
+[ext_resource type="Script" uid="uid://doo0vyheuoe15" path="res://Scripts/plate.gd" id="1_4p6b7"]
+[ext_resource type="Texture2D" uid="uid://b6x0hblwpyc0q" path="res://Game_asstes/Sweets/ChatGPT Image May 20, 2025, 12_03_31 PM.png" id="1_6t6q4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4p6b7"]
+size = Vector2(859.71, 207.997)
+
+[node name="Plate" type="CharacterBody2D"]
+position = Vector2(141, 409)
+script = ExtResource("1_4p6b7")
+
+[node name="Plate" type="Sprite2D" parent="."]
+position = Vector2(2, 3)
+scale = Vector2(0.222168, 0.287109)
+texture = ExtResource("1_6t6q4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 16.8589)
+scale = Vector2(0.222168, 0.287109)
+shape = SubResource("RectangleShape2D_4p6b7")

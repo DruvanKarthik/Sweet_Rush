@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://brhs43g54rh1w"]
+
+[ext_resource type="Texture2D" uid="uid://vittmg2p3jwy" path="res://Game_asstes/GUI/Levels_frames/13.png" id="1_tlcug"]
+
+[node name="Back_ground" type="Sprite2D"]
+position = Vector2(162, 293)
+scale = Vector2(0.301852, 0.425185)
+texture = ExtResource("1_tlcug")
