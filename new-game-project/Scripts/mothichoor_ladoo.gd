@@ -1,27 +1,16 @@
-extends Area2D
+extends CharacterBody2D
 
-@export var fall_speed := 200
-var is_caught := false
+const fall_speed = 300.0
+var is_caught = false
 
-func _process(delta):
-	if !is_caught:
-		position.y += fall_speed * delta
-
-	# Optional: auto-remove if it falls off screen
-	if position.y > get_viewport_rect().size.y:
-		queue_free()
-
-func _on_Sweet_body_entered(body):
-	if body.name == "Plate" and !is_caught:
-		is_caught = true
-
-		# Remove collision so it doesn’t trigger multiple times
-		$CollisionShape2D.disabled = true
-
-		# Make sweet a child of plate so it moves with it
-		get_parent().remove_child(self)
-		body.add_child(self)
-
-		# Adjust the sweet's position to "sit" on top of the plate
-		var offset = Vector2(0, -10)  # Adjust as needed
-		position = body.to_local(global_position) + offset
+func _physics_process(delta):
+	if not is_caught:
+		var collision = move_and_collide(Vector2(0, fall_speed * delta))
+		if collision:
+			var collider = collision.get_collider()
+			if collider.name == "Plate":
+				# Stick the sweet to the plate
+				is_caught = true
+				get_parent().remove_child(self)
+				collider.add_child(self)
+				position = collider.to_local(global_position)
