@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf7vnju825lhj"]
+
+[ext_resource type="Script" uid="uid://q7dyxpdif2w5" path="res://Scripts/Sweets/motichoor_ladoo.gd" id="1_3yrci"]
+[ext_resource type="Texture2D" uid="uid://cl67o66ex8lum" path="res://Game_asstes/Sweets/Pole.png" id="1_avkj3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3yrci"]
+radius = 70.1783
+
+[node name="Pole" type="CharacterBody2D"]
+script = ExtResource("1_3yrci")
+
+[node name="Pole" type="Sprite2D" parent="."]
+position = Vector2(171.625, 279.5)
+scale = Vector2(0.42192, 0.465986)
+texture = ExtResource("1_avkj3")
+region_enabled = true
+region_rect = Rect2(600, 559, 349, 294)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(172, 279)
+shape = SubResource("CircleShape2D_3yrci")

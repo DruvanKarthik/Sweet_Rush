@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1svqlwrhxsho"]
+
+[ext_resource type="Script" uid="uid://q7dyxpdif2w5" path="res://Scripts/Sweets/motichoor_ladoo.gd" id="1_36ly7"]
+[ext_resource type="Texture2D" uid="uid://belhvld5qc34t" path="res://Game_asstes/Sweets/Ghewar.png" id="1_q5u7t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q5u7t"]
+radius = 78.0064
+
+[node name="Ghewar" type="CharacterBody2D"]
+position = Vector2(28, 47)
+script = ExtResource("1_36ly7")
+
+[node name="Ghewar" type="Sprite2D" parent="."]
+position = Vector2(150, 132)
+texture = ExtResource("1_q5u7t")
+region_enabled = true
+region_rect = Rect2(785, 280, 157, 155)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(150, 130)
+shape = SubResource("CircleShape2D_q5u7t")

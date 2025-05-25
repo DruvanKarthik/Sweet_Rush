@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdxgh6uba1auk"]
+
+[ext_resource type="Texture2D" uid="uid://brejqcy81fx7j" path="res://Game_asstes/Sweets/Rasagula.png" id="1_7b6xo"]
+[ext_resource type="Script" uid="uid://q7dyxpdif2w5" path="res://Scripts/Sweets/motichoor_ladoo.gd" id="1_w1lxd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w1lxd"]
+radius = 56.3205
+
+[node name="Rasagula" type="CharacterBody2D"]
+script = ExtResource("1_w1lxd")
+
+[node name="Rasagula" type="Sprite2D" parent="."]
+position = Vector2(154, 259)
+scale = Vector2(0.328358, 0.317365)
+texture = ExtResource("1_7b6xo")
+region_enabled = true
+region_rect = Rect2(588, 155, 335, 334)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(153, 259)
+shape = SubResource("CircleShape2D_w1lxd")

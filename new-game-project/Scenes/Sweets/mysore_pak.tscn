@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://daxf6p83wffb8"]
+
+[ext_resource type="Texture2D" uid="uid://db1ugvjjwgv6k" path="res://Game_asstes/Sweets/Mysore_Pak.png" id="1_sug0y"]
+[ext_resource type="Script" uid="uid://q7dyxpdif2w5" path="res://Scripts/Sweets/motichoor_ladoo.gd" id="1_tup0o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tup0o"]
+size = Vector2(289.635, 265.461)
+
+[node name="MysorePak" type="CharacterBody2D"]
+script = ExtResource("1_tup0o")
+
+[node name="MysorePak" type="Sprite2D" parent="."]
+position = Vector2(137, 192)
+scale = Vector2(0.441935, 0.399306)
+texture = ExtResource("1_sug0y")
+region_enabled = true
+region_rect = Rect2(590, 564, 310, 288)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(133, 192)
+scale = Vector2(0.441935, 0.399306)
+shape = SubResource("RectangleShape2D_tup0o")

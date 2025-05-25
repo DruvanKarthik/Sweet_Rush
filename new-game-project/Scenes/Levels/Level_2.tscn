@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b21iwo122tev8"]
+
+[ext_resource type="Texture2D" uid="uid://dcibv7e2385xc" path="res://Game_asstes/GUI/Levels_frames/14.png" id="1_o3isv"]
+[ext_resource type="PackedScene" uid="uid://05v1dsaiq2cg" path="res://Scenes/plate.tscn" id="2_qox7n"]
+
+[node name="14" type="Sprite2D"]
+position = Vector2(159, 289)
+scale = Vector2(0.3, 0.431111)
+texture = ExtResource("1_o3isv")
+
+[node name="Plate" parent="." instance=ExtResource("2_qox7n")]
+position = Vector2(-10, 501.031)

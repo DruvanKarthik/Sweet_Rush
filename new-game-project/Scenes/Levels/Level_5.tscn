@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://do6fqk1nbxhpm"]
+
+[ext_resource type="Texture2D" uid="uid://crwurx63nj86d" path="res://Game_asstes/GUI/Levels_frames/17.png" id="1_7jnsk"]
+
+[node name="17" type="Sprite2D"]
+position = Vector2(163, 292.5)
+scale = Vector2(0.288889, 0.415556)
+texture = ExtResource("1_7jnsk")

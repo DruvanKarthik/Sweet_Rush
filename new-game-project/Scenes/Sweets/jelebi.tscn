@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx2j3f30mr32u"]
+
+[ext_resource type="Texture2D" uid="uid://71hgi8himb01" path="res://Game_asstes/Sweets/Jelebi.png" id="1_0l2k3"]
+[ext_resource type="Script" uid="uid://q7dyxpdif2w5" path="res://Scripts/Sweets/motichoor_ladoo.gd" id="1_n0ty5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n0ty5"]
+radius = 96.0208
+
+[node name="Jelebi" type="CharacterBody2D"]
+script = ExtResource("1_n0ty5")
+
+[node name="Jelebi" type="Sprite2D" parent="."]
+position = Vector2(153, 198)
+scale = Vector2(0.511335, 0.5)
+texture = ExtResource("1_0l2k3")
+region_enabled = true
+region_rect = Rect2(557, 150, 397, 366)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(152, 193)
+shape = SubResource("CircleShape2D_n0ty5")

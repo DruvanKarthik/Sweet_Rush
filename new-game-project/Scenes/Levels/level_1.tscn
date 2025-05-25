@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://brhs43g54rh1w"]
+[gd_scene load_steps=4 format=3 uid="uid://brhs43g54rh1w"]
 
 [ext_resource type="Texture2D" uid="uid://vittmg2p3jwy" path="res://Game_asstes/GUI/Levels_frames/13.png" id="1_tlcug"]
 [ext_resource type="PackedScene" uid="uid://05v1dsaiq2cg" path="res://Scenes/plate.tscn" id="2_4dpyx"]
-[ext_resource type="PackedScene" uid="uid://dnkx7uif5menw" path="res://Scenes/Sweets/sweet_spwaner.tscn" id="3_3mqfk"]
-[ext_resource type="PackedScene" uid="uid://b7wmlm4j23bdj" path="res://Scenes/Sweets/Mothichoor_ladoo.tscn" id="4_iixi8"]
+[ext_resource type="PackedScene" uid="uid://vplxvmi334b4" path="res://Scenes/Sweets/Motichoor_ladoo.tscn" id="3_3mqfk"]
 
 [node name="Back_ground" type="Sprite2D"]
 position = Vector2(159, 290.5)
@@ -13,15 +12,5 @@ texture = ExtResource("1_tlcug")
 [node name="Plate" parent="." instance=ExtResource("2_4dpyx")]
 position = Vector2(-283.5, 412.955)
 
-[node name="Sweet_spawner" type="Node" parent="."]
-
-[node name="Sweet_spwaner" parent="Sweet_spawner" instance=ExtResource("3_3mqfk")]
-position = Vector2(70, 45)
-scale = Vector2(0.301852, 0.425185)
-
-[node name="Sweet_spwaner2" parent="Sweet_spawner" instance=ExtResource("3_3mqfk")]
-position = Vector2(163.908, 41.2039)
-scale = Vector2(0.296296, 0.427407)
-
-[node name="Area2D" parent="." instance=ExtResource("4_iixi8")]
-position = Vector2(-276.25, -176.749)
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_3mqfk")]
+position = Vector2(-408.375, -1047.01)

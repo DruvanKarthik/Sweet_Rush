@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dix1vj0awuhlh"]
+
+[ext_resource type="Script" uid="uid://q7dyxpdif2w5" path="res://Scripts/Sweets/motichoor_ladoo.gd" id="1_mwjtk"]
+[ext_resource type="Texture2D" uid="uid://dsnswvgbjvmc1" path="res://Game_asstes/Sweets/Urad_dal_ladoo.png" id="1_o284f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mwjtk"]
+radius = 106.231
+
+[node name="UradDalLadoo" type="CharacterBody2D"]
+script = ExtResource("1_mwjtk")
+
+[node name="UradDalLadoo" type="Sprite2D" parent="."]
+position = Vector2(140, 152)
+texture = ExtResource("1_o284f")
+region_enabled = true
+region_rect = Rect2(268, 61, 187, 184)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(135, 153)
+shape = SubResource("CircleShape2D_mwjtk")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://707k2ugurnq3"]
+
+[ext_resource type="Script" uid="uid://q7dyxpdif2w5" path="res://Scripts/Sweets/motichoor_ladoo.gd" id="1_llgdg"]
+[ext_resource type="Texture2D" uid="uid://c8ra84hwkjqfy" path="res://Game_asstes/Sweets/Gulab_jamun.png" id="1_sgbmb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_llgdg"]
+radius = 115.0
+height = 394.0
+
+[node name="Gulab_jamun" type="CharacterBody2D"]
+script = ExtResource("1_llgdg")
+
+[node name="GulabJamun" type="Sprite2D" parent="."]
+position = Vector2(109, 223)
+texture = ExtResource("1_sgbmb")
+region_enabled = true
+region_rect = Rect2(660, 108, 240, 364)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(110, 216)
+shape = SubResource("CapsuleShape2D_llgdg")
