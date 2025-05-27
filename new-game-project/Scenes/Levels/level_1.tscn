@@ -1,16 +1,57 @@
-[gd_scene load_steps=4 format=3 uid="uid://brhs43g54rh1w"]
+[gd_scene load_steps=6 format=3 uid="uid://brhs43g54rh1w"]
 
 [ext_resource type="Texture2D" uid="uid://vittmg2p3jwy" path="res://Game_asstes/GUI/Levels_frames/13.png" id="1_tlcug"]
 [ext_resource type="PackedScene" uid="uid://05v1dsaiq2cg" path="res://Scenes/plate.tscn" id="2_4dpyx"]
+[ext_resource type="Script" uid="uid://btiqjf3i5gn3g" path="res://Scripts/Levels/level_1.gd" id="2_cyadu"]
 [ext_resource type="PackedScene" uid="uid://vplxvmi334b4" path="res://Scenes/Sweets/Motichoor_ladoo.tscn" id="3_3mqfk"]
+[ext_resource type="FontFile" uid="uid://cvtxkg7d6o1nk" path="res://Game_asstes/Fonts/CroxoxoianText.ttf" id="4_iixi8"]
 
 [node name="Back_ground" type="Sprite2D"]
 position = Vector2(159, 290.5)
 scale = Vector2(0.296296, 0.427407)
 texture = ExtResource("1_tlcug")
+script = ExtResource("2_cyadu")
 
 [node name="Plate" parent="." instance=ExtResource("2_4dpyx")]
 position = Vector2(-283.5, 412.955)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_3mqfk")]
 position = Vector2(-408.375, -1047.01)
+
+[node name="Score_label" type="Label" parent="."]
+offset_left = -286.875
+offset_top = -569.714
+offset_right = -4.87524
+offset_bottom = -458.714
+theme_override_fonts/font = ExtResource("4_iixi8")
+theme_override_font_sizes/font_size = 40
+text = "Sweet Score
+"
+
+[node name="Score" type="Label" parent="."]
+offset_left = -60.2501
+offset_top = -567.057
+offset_right = 88.7499
+offset_bottom = -456.057
+theme_override_fonts/font = ExtResource("4_iixi8")
+theme_override_font_sizes/font_size = 40
+text = "0
+"
+
+[node name="Tmer_label" type="Label" parent="."]
+offset_left = 104.625
+offset_top = -565.035
+offset_right = 216.625
+offset_bottom = -499.035
+theme_override_fonts/font = ExtResource("4_iixi8")
+theme_override_font_sizes/font_size = 40
+text = "Timer"
+
+[node name="Tmer" type="Label" parent="."]
+offset_left = 222.75
+offset_top = -562.696
+offset_right = 285.75
+offset_bottom = -507.696
+theme_override_fonts/font = ExtResource("4_iixi8")
+theme_override_font_sizes/font_size = 40
+text = "60"

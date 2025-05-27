@@ -13,6 +13,10 @@ config_version=5
 config/name="New Game Project"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
+[autoload]
+
+global="*res://Scripts/global.gd"
+
 [display]
 
 window/size/viewport_width=320

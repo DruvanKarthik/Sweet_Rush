@@ -18,4 +18,7 @@ func _physics_process(delta):
 		var collision = get_last_slide_collision()
 		if collision and collision.get_collider() is Node2D:
 			var collider_node = collision.get_collider() as Node2D
-			collider_node.position = Vector2(0, -800)
+			global.add_score(1)
+			collider_node.position = Vector2(randf_range(0, 250), -800)
+			if global.is_level_complete():
+					print("Level Complete!")  # Replace with scene transition or UI

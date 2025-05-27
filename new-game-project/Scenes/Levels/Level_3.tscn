@@ -1,8 +1,55 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvuq67ss65d3q"]
+[gd_scene load_steps=5 format=3 uid="uid://bvuq67ss65d3q"]
 
 [ext_resource type="Texture2D" uid="uid://dcet3ka4n7glk" path="res://Game_asstes/GUI/Levels_frames/15.png" id="1_dt10j"]
+[ext_resource type="PackedScene" uid="uid://daxf6p83wffb8" path="res://Scenes/Sweets/mysore_pak.tscn" id="2_pcf11"]
+[ext_resource type="PackedScene" uid="uid://05v1dsaiq2cg" path="res://Scenes/plate.tscn" id="3_ckbkd"]
+[ext_resource type="FontFile" uid="uid://cvtxkg7d6o1nk" path="res://Game_asstes/Fonts/CroxoxoianText.ttf" id="4_ckbkd"]
 
 [node name="15" type="Sprite2D"]
-position = Vector2(161, 291.5)
-scale = Vector2(0.290741, 0.425926)
+position = Vector2(162, 287.5)
+scale = Vector2(0.298148, 0.425926)
 texture = ExtResource("1_dt10j")
+
+[node name="MysorePak" parent="." instance=ExtResource("2_pcf11")]
+position = Vector2(-199.49, -987.261)
+
+[node name="Plate" parent="." instance=ExtResource("3_ckbkd")]
+position = Vector2(-10.3184, 409.696)
+
+[node name="Score_label" type="Label" parent="."]
+offset_left = -462.857
+offset_top = -473.087
+offset_right = -180.857
+offset_bottom = -362.087
+theme_override_fonts/font = ExtResource("4_ckbkd")
+theme_override_font_sizes/font_size = 40
+text = "Sweet Score
+"
+
+[node name="Score" type="Label" parent="."]
+offset_left = -234.782
+offset_top = -470.739
+offset_right = -85.7823
+offset_bottom = -359.739
+theme_override_fonts/font = ExtResource("4_ckbkd")
+theme_override_font_sizes/font_size = 40
+text = "0
+"
+
+[node name="Tmer_label" type="Label" parent="."]
+offset_left = 137.516
+offset_top = -470.739
+offset_right = 249.516
+offset_bottom = -404.739
+theme_override_fonts/font = ExtResource("4_ckbkd")
+theme_override_font_sizes/font_size = 40
+text = "Timer"
+
+[node name="Tmer" type="Label" parent="."]
+offset_left = 264.969
+offset_top = -468.391
+offset_right = 327.969
+offset_bottom = -413.391
+theme_override_fonts/font = ExtResource("4_ckbkd")
+theme_override_font_sizes/font_size = 40
+text = "60"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://djpj7jht0mxok"]
 
-[ext_resource type="Script" uid="uid://q7dyxpdif2w5" path="res://Scripts/Sweets/motichoor_ladoo.gd" id="1_gej51"]
+[ext_resource type="Script" uid="uid://q7dyxpdif2w5" path="res://Scripts/Sweets/Sweet.gd" id="1_gej51"]
 [ext_resource type="Texture2D" uid="uid://cfsrfyxshpal7" path="res://Game_asstes/Sweets/Kaju_katli.png" id="1_y0thl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gej51"]
@@ -9,13 +9,20 @@ size = Vector2(144, 118)
 [node name="KajuKatli" type="CharacterBody2D"]
 script = ExtResource("1_gej51")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(149, 174)
-shape = SubResource("RectangleShape2D_gej51")
-
 [node name="KajuKatli" type="Sprite2D" parent="."]
 position = Vector2(149, 174)
 scale = Vector2(0.327078, 0.471698)
 texture = ExtResource("1_y0thl")
 region_enabled = true
 region_rect = Rect2(579, 175, 373, 265)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(145, 171)
+shape = SubResource("RectangleShape2D_gej51")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(148, 175)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3, -4)
+shape = SubResource("RectangleShape2D_gej51")

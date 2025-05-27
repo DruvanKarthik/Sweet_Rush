@@ -1,12 +1,57 @@
-[gd_scene load_steps=3 format=3 uid="uid://b21iwo122tev8"]
+[gd_scene load_steps=6 format=3 uid="uid://b21iwo122tev8"]
 
 [ext_resource type="Texture2D" uid="uid://dcibv7e2385xc" path="res://Game_asstes/GUI/Levels_frames/14.png" id="1_o3isv"]
+[ext_resource type="Script" uid="uid://btiqjf3i5gn3g" path="res://Scripts/Levels/level_1.gd" id="2_n6t8q"]
 [ext_resource type="PackedScene" uid="uid://05v1dsaiq2cg" path="res://Scenes/plate.tscn" id="2_qox7n"]
+[ext_resource type="PackedScene" uid="uid://707k2ugurnq3" path="res://Scenes/Sweets/Gulab_jamun.tscn" id="3_ramdh"]
+[ext_resource type="FontFile" uid="uid://cvtxkg7d6o1nk" path="res://Game_asstes/Fonts/CroxoxoianText.ttf" id="4_jixyi"]
 
-[node name="14" type="Sprite2D"]
+[node name="level_2" type="Sprite2D"]
 position = Vector2(159, 289)
 scale = Vector2(0.3, 0.431111)
 texture = ExtResource("1_o3isv")
+script = ExtResource("2_n6t8q")
 
 [node name="Plate" parent="." instance=ExtResource("2_qox7n")]
 position = Vector2(-10, 501.031)
+
+[node name="Gulab_jamun" parent="." instance=ExtResource("3_ramdh")]
+position = Vector2(-53.3333, -779.382)
+
+[node name="Score_label" type="Label" parent="."]
+offset_left = -376.875
+offset_top = -446.776
+offset_right = -94.8752
+offset_bottom = -335.776
+theme_override_fonts/font = ExtResource("4_jixyi")
+theme_override_font_sizes/font_size = 40
+text = "Sweet Score
+"
+
+[node name="Score" type="Label" parent="."]
+offset_left = -147.0
+offset_top = -445.0
+offset_right = 2.0
+offset_bottom = -362.0
+theme_override_fonts/font = ExtResource("4_jixyi")
+theme_override_font_sizes/font_size = 40
+text = "0
+"
+
+[node name="Tmer_label" type="Label" parent="."]
+offset_left = 100.0
+offset_top = -452.32
+offset_right = 212.0
+offset_bottom = -386.32
+theme_override_fonts/font = ExtResource("4_jixyi")
+theme_override_font_sizes/font_size = 40
+text = "Timer"
+
+[node name="Tmer" type="Label" parent="."]
+offset_left = 226.667
+offset_top = -450.0
+offset_right = 289.667
+offset_bottom = -395.0
+theme_override_fonts/font = ExtResource("4_jixyi")
+theme_override_font_sizes/font_size = 40
+text = "60"

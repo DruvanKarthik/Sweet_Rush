@@ -1,8 +1,55 @@
-[gd_scene load_steps=2 format=3 uid="uid://do6fqk1nbxhpm"]
+[gd_scene load_steps=5 format=3 uid="uid://do6fqk1nbxhpm"]
 
 [ext_resource type="Texture2D" uid="uid://crwurx63nj86d" path="res://Game_asstes/GUI/Levels_frames/17.png" id="1_7jnsk"]
+[ext_resource type="PackedScene" uid="uid://djpj7jht0mxok" path="res://Scenes/Sweets/Kaju_katli.tscn" id="2_ef030"]
+[ext_resource type="PackedScene" uid="uid://05v1dsaiq2cg" path="res://Scenes/plate.tscn" id="3_ajiwh"]
+[ext_resource type="FontFile" uid="uid://cvtxkg7d6o1nk" path="res://Game_asstes/Fonts/CroxoxoianText.ttf" id="4_ajiwh"]
 
 [node name="17" type="Sprite2D"]
 position = Vector2(163, 292.5)
 scale = Vector2(0.288889, 0.415556)
 texture = ExtResource("1_7jnsk")
+
+[node name="KajuKatli" parent="." instance=ExtResource("2_ef030")]
+position = Vector2(-228.461, -949.33)
+
+[node name="Plate" parent="." instance=ExtResource("3_ajiwh")]
+position = Vector2(-48.4615, 441.577)
+
+[node name="Score_label" type="Label" parent="."]
+offset_left = -408.461
+offset_top = -304.411
+offset_right = -126.462
+offset_bottom = -193.411
+theme_override_fonts/font = ExtResource("4_ajiwh")
+theme_override_font_sizes/font_size = 40
+text = "Sweet Score
+"
+
+[node name="Score" type="Label" parent="."]
+offset_left = -181.836
+offset_top = -301.754
+offset_right = -32.8365
+offset_bottom = -190.754
+theme_override_fonts/font = ExtResource("4_ajiwh")
+theme_override_font_sizes/font_size = 40
+text = "0
+"
+
+[node name="Tmer_label" type="Label" parent="."]
+offset_left = -16.9614
+offset_top = -299.732
+offset_right = 95.0386
+offset_bottom = -233.732
+theme_override_fonts/font = ExtResource("4_ajiwh")
+theme_override_font_sizes/font_size = 40
+text = "Timer"
+
+[node name="Tmer" type="Label" parent="."]
+offset_left = 101.164
+offset_top = -297.393
+offset_right = 164.164
+offset_bottom = -242.393
+theme_override_fonts/font = ExtResource("4_ajiwh")
+theme_override_font_sizes/font_size = 40
+text = "60"

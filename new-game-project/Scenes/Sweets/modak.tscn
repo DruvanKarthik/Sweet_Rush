@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bh4wbtwapice8"]
 
 [ext_resource type="Texture2D" uid="uid://dyb7v5rcdjxy8" path="res://Game_asstes/Sweets/Modak.png" id="1_t0rir"]
-[ext_resource type="Script" uid="uid://q7dyxpdif2w5" path="res://Scripts/Sweets/motichoor_ladoo.gd" id="1_xwdad"]
+[ext_resource type="Script" uid="uid://q7dyxpdif2w5" path="res://Scripts/Sweets/Sweet.gd" id="1_xwdad"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xwdad"]
 radius = 76.4199
@@ -16,6 +16,12 @@ texture = ExtResource("1_t0rir")
 region_enabled = true
 region_rect = Rect2(609, 585, 316, 314)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(151, 303)
+shape = SubResource("CircleShape2D_xwdad")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(151, 303)
 shape = SubResource("CircleShape2D_xwdad")
