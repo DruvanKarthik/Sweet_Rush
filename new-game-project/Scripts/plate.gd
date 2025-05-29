@@ -21,4 +21,5 @@ func _physics_process(delta):
 			global.add_score(1)
 			collider_node.position = Vector2(randf_range(0, 250), -800)
 			if global.is_level_complete():
-					print("Level Complete!")  # Replace with scene transition or UI
+				var level_no = global.curr_level;
+				global.change_level(level_no);  # Replace with scene transition or UI

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://do6fqk1nbxhpm"]
+[gd_scene load_steps=6 format=3 uid="uid://do6fqk1nbxhpm"]
 
 [ext_resource type="Texture2D" uid="uid://crwurx63nj86d" path="res://Game_asstes/GUI/Levels_frames/17.png" id="1_7jnsk"]
 [ext_resource type="PackedScene" uid="uid://djpj7jht0mxok" path="res://Scenes/Sweets/Kaju_katli.tscn" id="2_ef030"]
 [ext_resource type="PackedScene" uid="uid://05v1dsaiq2cg" path="res://Scenes/plate.tscn" id="3_ajiwh"]
 [ext_resource type="FontFile" uid="uid://cvtxkg7d6o1nk" path="res://Game_asstes/Fonts/CroxoxoianText.ttf" id="4_ajiwh"]
+[ext_resource type="Texture2D" uid="uid://c1k74hvj5u2d1" path="res://Game_asstes/GUI/Ui/Pixel Art Indian-Inspired Game UI.png" id="5_1jg66"]
 
 [node name="17" type="Sprite2D"]
 position = Vector2(163, 292.5)
@@ -16,40 +17,54 @@ position = Vector2(-228.461, -949.33)
 [node name="Plate" parent="." instance=ExtResource("3_ajiwh")]
 position = Vector2(-48.4615, 441.577)
 
+[node name="PixelArtIndian-inspiredGameUi" type="Sprite2D" parent="."]
+position = Vector2(-249.493, -538.379)
+scale = Vector2(1.45974, 1)
+texture = ExtResource("5_1jg66")
+region_enabled = true
+region_rect = Rect2(31, 66, 326, 105)
+
+[node name="PixelArtIndian-inspiredGameUi2" type="Sprite2D" parent="."]
+position = Vector2(259.875, -546.761)
+scale = Vector2(1.28374, 1)
+texture = ExtResource("5_1jg66")
+region_enabled = true
+region_rect = Rect2(31, 189, 326, 105)
+
 [node name="Score_label" type="Label" parent="."]
-offset_left = -408.461
-offset_top = -304.411
-offset_right = -126.462
-offset_bottom = -193.411
+offset_left = -432.692
+offset_top = -569.117
+offset_right = -150.693
+offset_bottom = -458.117
 theme_override_fonts/font = ExtResource("4_ajiwh")
 theme_override_font_sizes/font_size = 40
 text = "Sweet Score
 "
 
 [node name="Score" type="Label" parent="."]
-offset_left = -181.836
-offset_top = -301.754
-offset_right = -32.8365
-offset_bottom = -190.754
+offset_left = -176.538
+offset_top = -564.304
+offset_right = -27.5389
+offset_bottom = -453.304
 theme_override_fonts/font = ExtResource("4_ajiwh")
 theme_override_font_sizes/font_size = 40
 text = "0
 "
 
 [node name="Tmer_label" type="Label" parent="."]
-offset_left = -16.9614
-offset_top = -299.732
-offset_right = 95.0386
-offset_bottom = -233.732
+offset_left = 114.231
+offset_top = -573.93
+offset_right = 226.231
+offset_bottom = -507.93
 theme_override_fonts/font = ExtResource("4_ajiwh")
 theme_override_font_sizes/font_size = 40
 text = "Timer"
 
 [node name="Tmer" type="Label" parent="."]
-offset_left = 101.164
-offset_top = -297.393
-offset_right = 164.164
-offset_bottom = -242.393
+offset_left = 349.615
+offset_top = -569.117
+offset_right = 412.615
+offset_bottom = -514.117
 theme_override_fonts/font = ExtResource("4_ajiwh")
 theme_override_font_sizes/font_size = 40
 text = "60"

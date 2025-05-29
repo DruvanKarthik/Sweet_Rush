@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b21iwo122tev8"]
+[gd_scene load_steps=7 format=3 uid="uid://b21iwo122tev8"]
 
 [ext_resource type="Texture2D" uid="uid://dcibv7e2385xc" path="res://Game_asstes/GUI/Levels_frames/14.png" id="1_o3isv"]
 [ext_resource type="Script" uid="uid://btiqjf3i5gn3g" path="res://Scripts/Levels/level_1.gd" id="2_n6t8q"]
 [ext_resource type="PackedScene" uid="uid://05v1dsaiq2cg" path="res://Scenes/plate.tscn" id="2_qox7n"]
 [ext_resource type="PackedScene" uid="uid://707k2ugurnq3" path="res://Scenes/Sweets/Gulab_jamun.tscn" id="3_ramdh"]
 [ext_resource type="FontFile" uid="uid://cvtxkg7d6o1nk" path="res://Game_asstes/Fonts/CroxoxoianText.ttf" id="4_jixyi"]
+[ext_resource type="Texture2D" uid="uid://c1k74hvj5u2d1" path="res://Game_asstes/GUI/Ui/Pixel Art Indian-Inspired Game UI.png" id="5_4ju3q"]
 
 [node name="level_2" type="Sprite2D"]
 position = Vector2(159, 289)
@@ -18,40 +19,54 @@ position = Vector2(-10, 501.031)
 [node name="Gulab_jamun" parent="." instance=ExtResource("3_ramdh")]
 position = Vector2(-53.3333, -779.382)
 
+[node name="PixelArtIndian-inspiredGameUi" type="Sprite2D" parent="."]
+position = Vector2(-190.688, -546.318)
+scale = Vector2(1.45974, 1)
+texture = ExtResource("5_4ju3q")
+region_enabled = true
+region_rect = Rect2(31, 66, 326, 105)
+
+[node name="PixelArtIndian-inspiredGameUi2" type="Sprite2D" parent="."]
+position = Vector2(259.875, -546.762)
+scale = Vector2(1.28374, 1)
+texture = ExtResource("5_4ju3q")
+region_enabled = true
+region_rect = Rect2(31, 189, 326, 105)
+
 [node name="Score_label" type="Label" parent="."]
-offset_left = -376.875
-offset_top = -446.776
-offset_right = -94.8752
-offset_bottom = -335.776
+offset_left = -370.0
+offset_top = -570.619
+offset_right = -88.0002
+offset_bottom = -459.619
 theme_override_fonts/font = ExtResource("4_jixyi")
 theme_override_font_sizes/font_size = 40
 text = "Sweet Score
 "
 
 [node name="Score" type="Label" parent="."]
-offset_left = -147.0
-offset_top = -445.0
-offset_right = 2.0
-offset_bottom = -362.0
+offset_left = -136.667
+offset_top = -568.299
+offset_right = 12.3334
+offset_bottom = -485.299
 theme_override_fonts/font = ExtResource("4_jixyi")
 theme_override_font_sizes/font_size = 40
 text = "0
 "
 
 [node name="Tmer_label" type="Label" parent="."]
-offset_left = 100.0
-offset_top = -452.32
-offset_right = 212.0
-offset_bottom = -386.32
+offset_left = 116.667
+offset_top = -570.619
+offset_right = 228.667
+offset_bottom = -504.619
 theme_override_fonts/font = ExtResource("4_jixyi")
 theme_override_font_sizes/font_size = 40
 text = "Timer"
 
 [node name="Tmer" type="Label" parent="."]
-offset_left = 226.667
-offset_top = -450.0
-offset_right = 289.667
-offset_bottom = -395.0
+offset_left = 343.333
+offset_top = -568.299
+offset_right = 406.333
+offset_bottom = -513.299
 theme_override_fonts/font = ExtResource("4_jixyi")
 theme_override_font_sizes/font_size = 40
 text = "60"

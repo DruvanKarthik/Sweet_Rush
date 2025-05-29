@@ -31,3 +31,5 @@ func reset_score_for_level(level_index: int):
 	if level_index >= scores.size():
 		scores.resize(level_index + 1)
 	scores[level_index] = 0
+func change_level(lvl_no):
+	get_tree().change_scene_to_file("res://Scenes/Levels/level_"+str(lvl_no)+".tscn")
